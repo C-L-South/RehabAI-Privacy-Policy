@@ -42,3 +42,5 @@
 .app-preview figcaption{margin-top:12px;text-align:center}
 .app-screenshot{display:block;height:auto;background:transparent}
 @media(max-width:900px){.app-previews{gap:12px}.app-screen-placeholder{padding:10px}.app-screen-placeholder p{font-size:15px}}
+
+.journey-player{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;background:#111}
