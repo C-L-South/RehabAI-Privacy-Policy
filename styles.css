@@ -33,11 +33,12 @@
 /* Replace each app-screen-placeholder div with an app-screenshot image. */
 .app-previews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
 .app-preview{margin:0;min-width:0}
-.app-screen-placeholder,.app-screenshot{width:100%;aspect-ratio:9/19.5;border-radius:18px;background:#eeecf0}
+.app-screen-placeholder,.app-screenshot{width:100%;border-radius:18px}
+.app-screen-placeholder{aspect-ratio:9/19.5;background:#eeecf0}
 .app-screen-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
 .app-screen-placeholder>span{font-size:12px;letter-spacing:1px;color:var(--accent)}
 .app-screen-placeholder p{font-size:18px;line-height:1.4;margin:18px 0 8px}
 .app-screen-placeholder small,.app-preview figcaption{font-size:12px;color:var(--muted)}
 .app-preview figcaption{margin-top:12px;text-align:center}
-.app-screenshot{display:block;object-fit:contain}
+.app-screenshot{display:block;height:auto;background:transparent}
 @media(max-width:900px){.app-previews{gap:12px}.app-screen-placeholder{padding:10px}.app-screen-placeholder p{font-size:15px}}
