@@ -49,5 +49,5 @@
 .credit-label{color:var(--muted);font-size:14px;margin:0 0 12px}
 .app-credit h2{font-size:32px;letter-spacing:-.8px;margin:0 0 28px}
 .credit-logo-placeholder{width:100%;max-width:300px;min-height:100px;display:flex;align-items:center;justify-content:center;padding:20px;background:#eeecf0;color:var(--muted);font-size:14px;text-align:center}
-.credit-logo{display:block;max-width:100%;width:300px;height:100px;object-fit:contain;object-position:left center;background:transparent}
+.credit-logo{display:block;max-width:100%;width:360px;height:140px;object-fit:contain;object-position:left center;background:transparent}
 @media(max-width:620px){.app-credits{grid-template-columns:1fr;gap:40px;margin-bottom:56px}.app-credit h2{font-size:28px}}
