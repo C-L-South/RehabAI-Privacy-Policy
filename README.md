@@ -10,8 +10,10 @@ Run `python3 -m http.server 3000` from this directory and open http://localhost:
 
 - `blog.html`: article index
 - `what-is-rehabai.html`: introduction to RehabAI and its core functionality
+- `first-release.html`: first-release notes dated September 20, 2026
+- `connectivity-audio-update.html`: connectivity and audio update dated September 29, 2026
 
-Posts carry publication dates and organization authorship. They describe verified website history and visible previews, not unverified app releases or medical outcomes. The app remains labeled coming soon. For a future release post, verify the version, release date, available platforms, actual changes, and download URL before publishing. Add the post to both the blog index and the homepage, and keep its BlogPosting metadata consistent with the visible text.
+Posts carry publication dates and organization authorship. Release details are supplied by the app owner, and the articles avoid medical-outcome claims. For future release posts, verify the version, release date, available platforms, actual changes, and download URL before publishing. Add each post to both the blog index and the homepage, and keep its BlogPosting metadata consistent with the visible text.
 
 ## Search and answer-engine visibility
 
@@ -23,9 +25,9 @@ Reviewed resources informing the approach:
 - [Neil Patel SEO Unlocked](https://neilpatel.com/training/seo-unlocked/): on-page SEO, content, and measurement curriculum.
 - [Profound 101](https://university.tryprofound.com/courses/profound-101): retrieval, answer-oriented content, and citation measurement. Public course overview reviewed; this is not a claim of course completion or use of a paid tool.
 
-The production URL is not configured in this repository. At inspection, the repository metadata reported GitHub Pages disabled and its default Pages URL returned 404. Once the live domain and hosting path are confirmed, add self-referencing absolute canonical URLs and `og:url` to all pages, absolute article URLs in JSON-LD, and a sitemap covering the five pages. Add a sitemap directive to the host-root robots.txt if you control it; a project-subdirectory robots.txt does not control the host. Do not invent a production URL.
+The production URL is not configured in this repository. At inspection, the repository metadata reported GitHub Pages disabled and its default Pages URL returned 404. Once the live domain and hosting path are confirmed, add self-referencing absolute canonical URLs and `og:url` to all pages, absolute article URLs in JSON-LD, and a sitemap covering the seven pages. Add a sitemap directive to the host-root robots.txt if you control it; a project-subdirectory robots.txt does not control the host. Do not invent a production URL.
 
-After deployment, verify all five URLs return 200, submit the sitemap in Search Console, and record a baseline of impressions, clicks, and queries. Compare subsequent periods and review whether answer engines cite the relevant pages. Ranking or citation improvements are not guaranteed.
+After deployment, verify all seven URLs return 200, submit the sitemap in Search Console, and record a baseline of impressions, clicks, and queries. Compare subsequent periods and review whether answer engines cite the relevant pages. Ranking or citation improvements are not guaranteed.
 
 ## Erasure requests
 
