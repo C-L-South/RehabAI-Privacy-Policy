@@ -1,0 +1,8 @@
+# Search crawlers may retrieve the public site and its assets.
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+Sitemap: https://rehab-ai.app/sitemap.xml
