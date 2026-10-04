@@ -11,6 +11,7 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
     'index.html': ('RehabAI — Home Exercise Guidance & Progress Tracking', 'RehabAI is a home exercise app with an exercise library, camera movement tracking, spoken setup instructions, and session score and repetition charts.'),
+    'password-guidance-update.html': ('RehabAI Update — Password Controls & Clearer Instructions', 'RehabAI adds a show-or-hide password button and logout confirmation, with clearer setup instructions and an easier-to-understand disclaimer.'),
     'blog.html': ('RehabAI Updates & Release Notes', 'Read RehabAI release notes and app updates, including improvements to exercise guidance, connectivity feedback, and spoken instructions.'),
     'first-release.html': ('RehabAI First Release — September 20, 2026', 'Explore the first RehabAI release: the exercise library, camera setup guidance, spoken instructions, movement feedback, and session progress charts.'),
     'connectivity-audio-update.html': ('RehabAI Update — Connection Errors & Audio Improvements', 'Read the September 29, 2026 RehabAI update: clearer no-internet feedback and a consistent starting volume of 60% for spoken exercise instructions.'),
@@ -78,7 +79,7 @@ def configure(site_url=None):
                 article['url'] = url(filename)
             graph.append(article)
         if filename == 'blog.html' and base:
-            page['mainEntity'] = {'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i+1, 'url': url(name), 'name': PAGES[name][0]} for i, name in enumerate(('connectivity-audio-update.html', 'first-release.html'))]}
+            page['mainEntity'] = {'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i+1, 'url': url(name), 'name': PAGES[name][0]} for i, name in enumerate(('password-guidance-update.html', 'connectivity-audio-update.html', 'first-release.html'))]}
         lines = [START, '<meta name="robots" content="index, follow, max-image-preview:large">']
         if base:
             lines += ['<link rel="canonical" href="' + html.escape(url(filename), quote=True) + '">', '<meta property="og:url" content="' + html.escape(url(filename), quote=True) + '">', '<meta property="og:image" content="' + html.escape(urljoin(base, 'images/session-updated.png'), quote=True) + '">', '<meta property="og:image:alt" content="RehabAI exercise session with a squat demonstration, movement tracking, and repetition counter.">', '<meta name="twitter:image" content="' + html.escape(urljoin(base, 'images/session-updated.png'), quote=True) + '">']
@@ -95,7 +96,7 @@ def configure(site_url=None):
         ET.indent(sitemap)
         ET.ElementTree(sitemap).write(ROOT / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
     (ROOT / 'robots.txt').write_text(robots)
-    print('Updated search metadata and crawler settings for 7 pages.')
+    print(f'Updated search metadata and crawler settings for {len(PAGES)} pages.')
     print('Canonical links and sitemap generated.' if base else 'Production URL pending: canonical links and sitemap intentionally omitted.')
 
 if __name__ == '__main__':

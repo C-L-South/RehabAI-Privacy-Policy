@@ -9,6 +9,7 @@ Run `python3 -m http.server 3000` from this directory and open http://localhost:
 ## Blog
 
 - `blog.html`: article index
+- `password-guidance-update.html`: password controls and clarity update dated October 4, 2026
 - `what-is-rehabai.html`: introduction to RehabAI and its core functionality
 - `first-release.html`: first-release notes dated September 20, 2026
 - `connectivity-audio-update.html`: connectivity and audio update dated September 29, 2026
@@ -21,7 +22,7 @@ Pages have unique titles and descriptions, social-preview metadata, descriptive 
 
 Production URL: **https://rehab-ai.app/**. Each HTML page has an absolute canonical URL and social preview URL. The homepage includes linked WebSite, Organization, Person, and MobileApplication entities; articles retain their visible dates and authors. Structured data describes existing features without invented ratings, prices, or medical outcomes.
 
-Run `python3 scripts/configure_search.py` after editing page search descriptions. To change the verified production domain, run `python3 scripts/configure_search.py --site-url https://your-production-domain/`. The generator updates head metadata, `robots.txt`, and `sitemap.xml` without changing visible page content. The sitemap includes the six currently linked pages; the older introduction article remains available but is omitted from the sitemap.
+Run `python3 scripts/configure_search.py` after editing page search descriptions. To change the verified production domain, run `python3 scripts/configure_search.py --site-url https://your-production-domain/`. The generator updates head metadata, `robots.txt`, and `sitemap.xml` without changing visible page content. The sitemap includes the seven currently linked pages; the older introduction article remains available but is omitted from the sitemap.
 
 Deploy these files at the domain root. `robots.txt` allows public crawling, explicitly includes OAI-SearchBot, and points to the sitemap. Crawl permissions do not override a hosting firewall or guarantee inclusion.
 
