@@ -521,8 +521,26 @@
 
 /* Keep both ways to reach Google Play together at narrow widths. */
 .home .hero-actions { flex-wrap: nowrap; }
-.home .hero-actions > .button { flex: 1 1 auto; max-width: 250px; min-width: 0; white-space: normal; text-align: center; }
+.home .hero-actions > .button { flex: 0 1 auto; min-width: 0; padding-inline: 18px; white-space: normal; text-align: center; }
 @media (max-width: 639px) {
   .home .hero-actions { gap: 16px; align-items: center; }
   .home .hero-actions > .button { padding-inline: 12px; font-size: 15px; }
+}
+
+/* Email updates sit after the product tour, with one clear signup action. */
+.home .subscribe-section { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 64px; align-items: start; padding-block: 64px; border-bottom: 1px solid var(--border); }
+.home .subscribe-copy h2 { font-size: clamp(28px,3vw,38px); letter-spacing: -1px; margin-bottom: 14px; }
+.home .subscribe-copy p { font-size: 18px; margin: 0; }
+.home .subscribe-form { margin: 0; min-width: 0; }
+.home .subscribe-form label { font-size: 16px; font-weight: 600; margin: 0 0 10px; }
+.home .subscribe-fields { display: flex; gap: 12px; }
+.home .subscribe-fields input { flex: 1 1 auto; min-width: 0; width: 100%; margin: 0; padding: 14px 16px; min-height: 56px; border: 1px solid var(--border); border-radius: var(--radius-button); background: var(--surface); color: var(--text); font: inherit; font-size: 17px; }
+.home .subscribe-fields .button { flex: 0 0 auto; }
+.home #subscribe-consent { font-size: 14px; line-height: 1.6; margin: 14px 0 0; }
+@media (max-width: 849px) {
+  .home .subscribe-section { grid-template-columns: 1fr; gap: 28px; padding-block: 48px; }
+}
+@media (max-width: 639px) {
+  .home .subscribe-fields { flex-direction: column; }
+  .home .subscribe-fields .button { width: 100%; }
 }

@@ -54,3 +54,7 @@ This is a manual review workflow; submitting the form does not erase account dat
 See [DESIGN-HANDOFF.md](DESIGN-HANDOFF.md) for the design audit, reference principles, asset inventory, validation, and pending owner confirmations. Homepage styling is scoped in `home.css`; supporting pages continue using `styles.css`. All “Download the app” links in the header, hero, and mobile menu open the owner-supplied [Google Play listing](https://play.google.com/store/apps/details?id=appinventor.ai_codyli9219.RehabAI_18&hl=en_US). The controls are ordinary links with accessible labels identifying Google Play.
 
 The hero includes a self-hosted SVG QR code pointing to the same Google Play URL as the download links. It includes a four-module white quiet zone and uses standard QR encoding. Regenerate `images/google-play-qr.svg` if the store destination changes.
+
+## Email subscriptions
+
+The landing page posts opt-in email addresses to a published Google Form. Google Forms confirms the submission and records responses in the owner's private Sheet. The email field is required and validated. Response summaries are disabled, and no Google sign-in is required. The owner manages update emails and unsubscribe requests; this signup does not automatically send a newsletter. Keep the response spreadsheet private.
