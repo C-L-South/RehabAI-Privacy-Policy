@@ -518,3 +518,11 @@
   .home .download-qr { width: 147px; flex-basis: 147px; }
   .home .download-qr img { width: 147px; height: 147px; }
 }
+
+/* Keep both ways to reach Google Play together at narrow widths. */
+.home .hero-actions { flex-wrap: nowrap; }
+.home .hero-actions > .button { flex: 1 1 auto; max-width: 250px; min-width: 0; white-space: normal; text-align: center; }
+@media (max-width: 639px) {
+  .home .hero-actions { gap: 16px; align-items: center; }
+  .home .hero-actions > .button { padding-inline: 12px; font-size: 15px; }
+}
