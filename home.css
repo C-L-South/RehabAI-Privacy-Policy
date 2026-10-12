@@ -509,12 +509,12 @@
 }
 
 /* A scannable download destination beside the direct Google Play link. */
-.home .download-qr { margin: 0; width: 160px; flex: 0 0 160px; text-align: center; }
+.home .download-qr { margin: 0; width: 196px; flex: 0 0 196px; text-align: center; }
 .home .download-qr a { display: block; background: white; border-radius: 12px; overflow: hidden; }
-.home .download-qr img { display: block; width: 160px; height: 160px; }
+.home .download-qr img { display: block; width: 196px; height: 196px; }
 .home .download-qr figcaption { font-size: 14px; line-height: 1.4; color: var(--text-muted); margin-top: 8px; }
 @media (max-width: 639px) {
   .home .hero-actions { align-items: flex-start; gap: 20px; }
-  .home .download-qr { width: 144px; flex-basis: 144px; }
-  .home .download-qr img { width: 144px; height: 144px; }
+  .home .download-qr { width: 147px; flex-basis: 147px; }
+  .home .download-qr img { width: 147px; height: 147px; }
 }
