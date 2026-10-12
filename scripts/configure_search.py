@@ -10,6 +10,7 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
+    'about.html': ('About RehabAI — Our Story & Development', 'Read the story behind RehabAI, its development with MIT App Inventor, support from Braze and the Youth Incubator Program, and recognition at Congress and MIT.'),
     'index.html': ('RehabAI — Home Exercise Guidance & Progress Tracking', 'RehabAI is a home exercise app with an exercise library, camera movement tracking, spoken setup instructions, and session score and repetition charts.'),
     'password-guidance-update.html': ('RehabAI Update — Password Controls & Clearer Instructions', 'RehabAI adds a show-or-hide password button and logout confirmation, with clearer setup instructions and an easier-to-understand disclaimer.'),
     'blog.html': ('RehabAI Updates & Release Notes', 'Read RehabAI release notes and app updates, including improvements to exercise guidance, connectivity feedback, and spoken instructions.'),
@@ -40,7 +41,7 @@ def configure(site_url=None):
     def entity(name):
         return (url('index.html') or '') + '#' + name
     org = {'@type': 'Organization', '@id': entity('organization'), 'name': 'RehabAI', 'email': 'support@rehab-ai.app'}
-    person = {'@type': 'Person', '@id': entity('creator'), 'name': 'Cody Li'}
+    person = {'@type': 'Person', '@id': entity('creator'), 'name': 'Cody Li', 'mainEntityOfPage': {'@id': (url('about.html') or '') + '#webpage'}}
     app = {'@type': 'MobileApplication', '@id': entity('app'), 'name': 'RehabAI', 'description': PAGES['index.html'][1], 'applicationCategory': 'HealthApplication', 'creator': {'@id': entity('creator')}, 'featureList': ['Exercise library with recommended and all-exercise views', 'Camera movement tracking and repetition counting', 'Exercise setup and instructions read aloud', 'Session score and repetition charts']}
     website = {'@type': 'WebSite', '@id': entity('website'), 'name': 'RehabAI', 'publisher': {'@id': entity('organization')}, 'inLanguage': 'en'}
     if base:
@@ -62,13 +63,16 @@ def configure(site_url=None):
         # Preserve article dates and author evidence already present on each page.
         article = next((node for node in old_articles if node.get('@type') == 'BlogPosting'), None)
         page_id = (url(filename) or '') + '#webpage'
-        page = {'@type': 'CollectionPage' if filename == 'blog.html' else 'WebPage', '@id': page_id, 'name': title, 'description': description, 'inLanguage': 'en', 'isPartOf': {'@id': entity('website')}, 'publisher': {'@id': entity('organization')}}
+        page = {'@type': 'AboutPage' if filename == 'about.html' else 'CollectionPage' if filename == 'blog.html' else 'WebPage', '@id': page_id, 'name': title, 'description': description, 'inLanguage': 'en', 'isPartOf': {'@id': entity('website')}, 'publisher': {'@id': entity('organization')}}
         if base:
             page['url'] = url(filename)
         graph = [page]
         if filename == 'index.html':
             page['about'] = {'@id': entity('app')}
             graph += [org, person, app, website]
+        elif filename == 'about.html':
+            page['mainEntity'] = {'@id': entity('creator')}
+            graph += [org, person, website]
         else:
             graph += [org, website]
         if article:

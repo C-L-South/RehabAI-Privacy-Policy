@@ -101,3 +101,14 @@
   .updates-page .release-previous { padding-top: 28px; }
   .updates-page .release-previous h2 { font-size: 26px; margin-bottom: 14px; }
 }
+
+/* About reuses the existing story and development sections. */
+.home.about-page #main.about-main { padding-top: 132px; }
+.home.about-page .about-heading { max-width: var(--content-max); margin-bottom: 48px; }
+.home.about-page .founder-section { padding-top: 0; }
+.home.about-page .partner-section { padding-block: 48px; }
+@media (max-width: 639px) {
+  .home.about-page #main.about-main { padding-top: 104px; }
+  .home.about-page .about-heading { margin-bottom: 32px; }
+  .home.about-page .partner-section { padding-block: 32px; }
+}

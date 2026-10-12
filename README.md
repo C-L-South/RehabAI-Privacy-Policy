@@ -6,6 +6,10 @@ A static HTML/CSS website with app previews, a blog, privacy information, and an
 
 Run `python3 -m http.server 3000` from this directory and open http://localhost:3000. All pages work without JavaScript. The homepage uses a native mobile menu; `home.js` adds menu dismissal, a responsive feature tour, and a scroll-progress timeline. The homepage includes the existing YouTube app showcase in a responsive embed with a fallback link, dedicated MIT App Inventor/Braze credits, and the founder’s story timeline. Deploy the entire directory to your static host, including `images/`.
 
+## About
+
+`about.html` contains the founder’s original story timeline, MIT App Inventor development credits, Braze/YIP support, and recognition photos and videos. The homepage focuses on the app hero and feature tour. About is linked from desktop, mobile, and footer navigation.
+
 ## Blog
 
 - `blog.html`: article index
@@ -22,7 +26,7 @@ Pages have unique titles and descriptions, social-preview metadata, descriptive 
 
 Production URL: **https://rehab-ai.app/**. Each HTML page has an absolute canonical URL and social preview URL. The homepage includes linked WebSite, Organization, Person, and MobileApplication entities; articles retain their visible dates and authors. Structured data describes existing features without invented ratings, prices, or medical outcomes.
 
-Run `python3 scripts/configure_search.py` after editing page search descriptions. To change the verified production domain, run `python3 scripts/configure_search.py --site-url https://your-production-domain/`. The generator updates head metadata, `robots.txt`, and `sitemap.xml` without changing visible page content. The sitemap includes the seven currently linked pages; the older introduction article remains available but is omitted from the sitemap.
+Run `python3 scripts/configure_search.py` after editing page search descriptions. To change the verified production domain, run `python3 scripts/configure_search.py --site-url https://your-production-domain/`. The generator updates head metadata, `robots.txt`, and `sitemap.xml` without changing visible page content. The sitemap includes the eight currently linked pages; the older introduction article remains available but is omitted from the sitemap.
 
 Deploy these files at the domain root. `robots.txt` allows public crawling, explicitly includes OAI-SearchBot, and points to the sitemap. Crawl permissions do not override a hosting firewall or guarantee inclusion.
 
