@@ -51,4 +51,4 @@ This is a manual review workflow; submitting the form does not erase account dat
 
 ## Homepage design
 
-See [DESIGN-HANDOFF.md](DESIGN-HANDOFF.md) for the design audit, reference principles, asset inventory, validation, and pending owner confirmations. Homepage styling is scoped in `home.css`; supporting pages continue using `styles.css`. Store URLs are unconfirmed. Per the owner’s latest design request, the header, hero, and mobile menu show disabled “Download the app” buttons as an appearance-only design requested by the owner. “See app features” remains the working feature-tour link.
+See [DESIGN-HANDOFF.md](DESIGN-HANDOFF.md) for the design audit, reference principles, asset inventory, validation, and pending owner confirmations. Homepage styling is scoped in `home.css`; supporting pages continue using `styles.css`. All “Download the app” links in the header, hero, and mobile menu open the owner-supplied [Google Play listing](https://play.google.com/store/apps/details?id=appinventor.ai_codyli9219.RehabAI_18&hl=en_US). The controls are ordinary links with accessible labels identifying Google Play.
