@@ -544,3 +544,8 @@
   .home .subscribe-fields { flex-direction: column; }
   .home .subscribe-fields .button { width: 100%; }
 }
+
+/* Keep the hero annotations visible on desktop, including 1204px layouts. */
+@media (min-width: 1101px) {
+  .home .hero .stage-label { display: flex; }
+}
