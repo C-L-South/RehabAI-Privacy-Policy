@@ -58,3 +58,5 @@ The hero includes a self-hosted SVG QR code pointing to the same Google Play URL
 ## Email subscriptions
 
 The landing page posts opt-in email addresses to a published Google Form. Google Forms confirms the submission and records responses in the owner's private Sheet. The email field is required and validated. Response summaries are disabled, and no Google sign-in is required. The owner manages update emails and unsubscribe requests; this signup does not automatically send a newsletter. Keep the response spreadsheet private.
+
+Google Play links use the official English “Get it on Google Play” SVG badge downloaded from Google’s [Partner Marketing Hub](https://partnermarketinghub.withgoogle.com/brands/google-play/google-play/lockups-icons-badges/). The supplied artwork is unchanged; CSS reserves clear space around it.
