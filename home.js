@@ -191,3 +191,18 @@ if (storyTimeline) {
   if ('ResizeObserver' in window) new ResizeObserver(scheduleStoryTimeline).observe(storyTimeline);
   updateStoryTimeline();
 }
+
+// Native controls remain available when this optional play affordance cannot run.
+const commercial = document.getElementById('commercial-video');
+const commercialPlay = document.querySelector('.commercial-play');
+if (commercial && commercialPlay) {
+  commercialPlay.hidden = false;
+  commercialPlay.addEventListener('click', () => {
+    commercial.play().then(() => commercial.focus()).catch(() => {
+      commercialPlay.hidden = true;
+      commercial.focus();
+    });
+  });
+  commercial.addEventListener('play', () => { commercialPlay.hidden = true; });
+  commercial.addEventListener('ended', () => { commercialPlay.hidden = false; });
+}

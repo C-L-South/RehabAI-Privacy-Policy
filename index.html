@@ -12,8 +12,8 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="home.css?v=20">
-  <script src="home.js?v=6" defer></script>
+  <link rel="stylesheet" href="home.css?v=21">
+  <script src="home.js?v=7" defer></script>
   <link rel="stylesheet" href="features.css?v=7">
 
 <!-- Search metadata: generated -->
@@ -29,7 +29,7 @@
 <body class="home">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header wrap">
-    <a class="brand" href="index.html" aria-label="RehabAI home">RehabAI</a>
+    <a class="brand brand-logo" href="index.html" aria-label="RehabAI home"><img src="images/rehabai-logo.png" width="2000" height="500" alt="RehabAI"></a>
     <details class="mobile-menu">
       <summary>Menu <span aria-hidden="true">＋</span></summary>
       <nav aria-label="Mobile navigation">
@@ -65,6 +65,18 @@
         <div class="stage-label demonstration"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 5 10 7-10 7Z"/></svg><span>Follow the<br><strong>demonstration</strong></span></div>
         <div class="stage-label tracking"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/><circle cx="12" cy="12" r="3"/></svg><span>See your<br><strong>movement</strong></span></div>
       </figure>
+    </section>
+
+    <section id="commercial" class="commercial-section wrap" aria-labelledby="commercial-title">
+      <h2 id="commercial-title">See RehabAI in action</h2>
+      <div class="commercial-player">
+        <video id="commercial-video" controls playsinline preload="none" poster="media/rehabai-commercial-poster.jpg" width="960" height="540" aria-label="RehabAI one-minute commercial">
+          <source src="media/rehabai-commercial.mp4" type="video/mp4">
+          <track kind="captions" src="media/rehabai-commercial-en.vtt" srclang="en" label="English (auto-generated)">
+          <p>Your browser does not support this video. <a href="media/rehabai-commercial.mp4">Watch the RehabAI commercial</a>.</p>
+        </video>
+        <button class="commercial-play" type="button" aria-label="Play the RehabAI commercial" hidden><svg aria-hidden="true" viewBox="0 0 32 32"><path d="m12 7 15 9-15 9Z"/></svg></button>
+      </div>
     </section>
 
     <section id="features" class="feature-collection wrap" aria-label="RehabAI features">
