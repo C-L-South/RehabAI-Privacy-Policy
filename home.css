@@ -573,17 +573,10 @@
 .home .commercial-section { padding-block: 80px 64px; }
 .home .commercial-section h2 { margin-bottom: 28px; }
 .home .commercial-player { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius-card); background: var(--brand-dark); overflow: hidden; }
-.home .commercial-player video { display: block; width: 100%; height: 100%; object-fit: contain; }
-.home .commercial-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 88px; height: 88px; padding: 0; border: 2px solid white; border-radius: 50%; background: var(--brand); color: white; box-shadow: 0 8px 32px rgba(0,0,0,.2); cursor: pointer; }
-.home .commercial-play[hidden] { display: none; }
-.home .commercial-play:hover { background: var(--brand-hover); }
-.home .commercial-play:focus-visible { outline: 3px solid white; outline-offset: 6px; }
-.home .commercial-play svg { width: 38px; height: 38px; fill: currentColor; }
+.home .commercial-player iframe { display: block; width: 100%; height: 100%; border: 0; }
 @media (max-width: 639px) {
   .home .site-header .brand-logo { width: 132px; }
   .home .commercial-section { padding-block: 48px; }
   .home .commercial-section h2 { margin-bottom: 20px; }
   .home .commercial-player { border-radius: 16px; }
-  .home .commercial-play { width: 60px; height: 60px; }
-  .home .commercial-play svg { width: 30px; height: 30px; }
 }
